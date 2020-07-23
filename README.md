@@ -40,7 +40,7 @@
 * exists
 
 ### Usage
-* `dbo.extractInsertUpdateDelete @optionMode = 'extractEntriesColumnOne', @columnOneString = 'String-Example'`
+* `dbo.extractInsertUpdateDelete @optionMode = 'extractEntriesColumnOne', @columnOneString = 'String-One-Example'`
 * `dbo.extractInsertUpdateDelete @optionMode = 'extractTableEntriesReport'`
 * `dbo.extractInsertUpdateDelete @optionMode = 'insertColumnOneColumnTwoEntry', @userIdentifierString = 'UserIdentifierStringExample', @columnOneString = 'String-One-Example', @columnTwoString = 'String-Two-Example'`
 * `dbo.extractInsertUpdateDelete @optionMode = 'updateColumnTwo', @userIdentifierString = 'UserIdentifierStringExample', @columnOneString = 'String-One-Example', @columnTwoString = 'String-Two-Example', @columnTwoStringNew = 'String-Two-Example-New'`
