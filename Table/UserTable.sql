@@ -12,7 +12,7 @@ GO
 -- =============================================
 --        File: UserTable
 --     Created: 07/22/2020
---     Updated: 07/22/2020
+--     Updated: 07/26/2020
 --  Programmer: Cuates
 --   Update By: Cuates
 --     Purpose: User table
@@ -21,8 +21,8 @@ CREATE TABLE [dbo].[UserTable](
   [utID] [int] identity (1, 1) not null,
   [userID] [nvarchar](100) not null,
   [userNumber] [int] not null,
-  [created_date] [datetime2](7) null null,
-  [modified_date] [datetime2](7) null null
+  [created_date] [datetime2](7) null,
+  [modified_date] [datetime2](7) null,
   CONSTRAINT [UK_userID] UNIQUE NONCLUSTERED
   (
     [userID] ASC
