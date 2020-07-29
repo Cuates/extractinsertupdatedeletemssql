@@ -21,7 +21,8 @@
 
 ### Prerequisite Data Types
 * nvarchar
-* integer (int)
+* bigint
+* int
 * smallint
 * datetime2
 
