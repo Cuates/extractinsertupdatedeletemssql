@@ -12,13 +12,13 @@ go
 -- ==========================
 --        File: TableEntries
 --     Created: 07/22/2020
---     Updated: 07/22/2020
+--     Updated: 07/29/2020
 --  Programmer: Cuates
 --   Update By: Cuates
 --     Purpose: Table entries
 -- ==========================
 create table [dbo].[TableEntries](
-  [teID] [int] identity (1, 1) not null,
+  [teID] [bigint] identity (1, 1) not null,
   [created_date] [datetime2](7) not null,
   [modified_date] [datetime2](7) not null,
   [userIdentifier] [int] not null,
