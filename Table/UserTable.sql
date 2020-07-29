@@ -1,41 +1,41 @@
-USE [DatabaseName]
-GO
+use [DatabaseName]
+go
 
 -- Set ansi nulls
-SET ANSI_NULLS ON
-GO
+set ansi_nulls on
+go
 
 -- Set quoted identifier
-SET QUOTED_IDENTIFIER ON
-GO
+set quoted_identifier on
+go
 
--- =============================================
+-- =======================
 --        File: UserTable
 --     Created: 07/22/2020
---     Updated: 07/26/2020
+--     Updated: 07/29/2020
 --  Programmer: Cuates
 --   Update By: Cuates
 --     Purpose: User table
--- =============================================
-CREATE TABLE [dbo].[UserTable](
-  [utID] [int] identity (1, 1) not null,
+-- =======================
+create table [dbo].[UserTable](
+  [utID] [bigint] identity (1, 1) not null,
   [userID] [nvarchar](100) not null,
   [userNumber] [int] not null,
   [created_date] [datetime2](7) null,
   [modified_date] [datetime2](7) null,
-  CONSTRAINT [UK_userID] UNIQUE NONCLUSTERED
+  constraint [UK_UserTable_userID] unique nonclustered
   (
-    [userID] ASC
-  )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
-  CONSTRAINT [UK_userNumber] UNIQUE NONCLUSTERED
+    [userID] asc
+  )with (pad_index = off, statistics_norecompute = off, ignore_dup_key = off, allow_row_locks = on, allow_page_locks = on) on [primary],
+  constraint [UK_UserTable_userNumber] unique nonclustered
   (
-    [userNumber] ASC
-  )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
+    [userNumber] asc
+  )with (pad_index = off, statistics_norecompute = off, ignore_dup_key = off, allow_row_locks = on, allow_page_locks = on) on [primary]
+) on [primary]
+go
 
-ALTER TABLE [dbo].[UserTable] ADD  DEFAULT (getdate()) FOR [created_date]
-GO
+alter table [dbo].[UserTable] add  default (getdate()) for [created_date]
+go
 
-ALTER TABLE [dbo].[UserTable] ADD  DEFAULT (getdate()) FOR [modified_date]
-GO
+alter table [dbo].[UserTable] add  default (getdate()) for [modified_date]
+go

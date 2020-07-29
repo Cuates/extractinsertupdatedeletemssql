@@ -1,13 +1,13 @@
-USE [DatabaseName]
-GO
+use [DatabaseName]
+go
 
 -- Set ansi nulls
-SET ANSI_NULLS ON
-GO
+set ansi_nulls on
+go
 
 -- Set quoted identifier
-SET QUOTED_IDENTIFIER ON
-GO
+set quoted_identifier on
+go
 
 -- ==========================
 --        File: TableEntries
@@ -17,22 +17,22 @@ GO
 --   Update By: Cuates
 --     Purpose: Table entries
 -- ==========================
-CREATE TABLE [dbo].[TableEntries](
+create table [dbo].[TableEntries](
   [teID] [int] identity (1, 1) not null,
   [created_date] [datetime2](7) not null,
   [modified_date] [datetime2](7) not null,
   [userIdentifier] [int] not null,
   [columnOne] [nvarchar](255) not null,
   [columnTwo] [nvarchar](255) not null,
-CONSTRAINT [PK_TableEntries] PRIMARY KEY CLUSTERED
-(
-  [columnOne] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
-) ON [PRIMARY]
-GO
+  constraint [PK_TableEntries] primary key clustered
+  (
+    [columnOne] asc
+  )with (pad_index = off, statistics_norecompute = off, ignore_dup_key = off, allow_row_locks = on, allow_page_locks = on, fillfactor = 90) on [primary]
+) on [primary]
+go
 
-ALTER TABLE [dbo].[TableEntries] ADD  DEFAULT (getdate()) FOR [created_date]
-GO
+alter table [dbo].[TableEntries] add  default (getdate()) for [created_date]
+go
 
-ALTER TABLE [dbo].[TableEntries] ADD  DEFAULT (getdate()) FOR [modified_date]
-GO
+alter table [dbo].[TableEntries] add  default (getdate()) for [modified_date]
+go
